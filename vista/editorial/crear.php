@@ -6,7 +6,7 @@
         body{ 
             margin: 0;
             padding: 0; 
-            background: url(../resources/biblio.jpg) no-repeat center;
+            background: url(../../resources/biblio.jpg) no-repeat center;
             background-size:cover;               
             height: 100vh;
         }
@@ -14,8 +14,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head><br>
 
 <body>
@@ -26,15 +26,15 @@
                 <ul class="nav navbar-nav">
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Editorial</strong></a>
                         <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="editorial.html">Crear</a>
-                            <a class="dropdown-item" role="presentation" href="editorial-consulta.html">Consultar</a>
+                            <a class="dropdown-item" role="presentation" href="crear.php">Crear</a>
+                            <a class="dropdown-item" role="presentation" href="consultar.php">Consultar</a>
                         </div>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav">
                      <div class="">
-                         <a href="../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
+                         <a href="../../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
                      </div>
                 </ul>
             </div>
@@ -61,9 +61,9 @@
         </div>
         </div>
     </div>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/editorial.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/editorial.js"></script>
 </body>
 
 </html>

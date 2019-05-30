@@ -31,7 +31,7 @@
 
                 <ul class="nav navbar-nav">
                      <div class="">
-                        <a href="../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
+                        <a href="../../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
                      </div>
                 </ul>
             </div>

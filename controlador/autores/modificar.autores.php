@@ -1,5 +1,5 @@
 <?php
-    require_once dirname(__DIR__, 2) . '/modelo/autores/guardar.autores.php';
+    require_once dirname(__DIR__, 2) . '/modelo/autores/autores.php';
 
     $respuesta = array(
         "Respuesta" => "",
@@ -7,7 +7,8 @@
     );
 
     if(isset($_POST)){
-        $autores = $_POST["nombre_autor"];
+        $autores = $_POST["Autor"];
+        //$libro = $_POST['Libro'];
         $id = $_POST["id_autor"];
 
         if($autores == ""){
@@ -20,7 +21,7 @@
         }
 
         $modeloAutores = new ModeloAutores();
-        $respuesta["Respuesta"] = $modeloAutores->ModificarAutores($id, $autores);
+        $respuesta["Respuesta"] = $modeloAutores->ModificarAutores($id, $autores, "aasd");
         echo json_encode($respuesta);
     }
 

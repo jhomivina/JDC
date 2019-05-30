@@ -25,13 +25,13 @@
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Libros</strong></a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="libros.html">Crear</a><a class="dropdown-item" role="presentation" href="libros-consulta.html">Consultar</a></div>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="crear.php">Crear</a><a class="dropdown-item" role="presentation" href="consultar.php">Consultar</a></div>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav">
                      <div class="">
-                        <a href="../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
+                        <a href="../../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
                      </div>
                 </ul>
             </div>

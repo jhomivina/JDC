@@ -93,6 +93,8 @@
                             <?php 
                                 foreach ($editoriales as $editorial) {
                                     echo "<option value='" . $editorial->idEditorial . "'>" . $editorial->nombreEditorial . "</option>";
+  
+  
                                 }
                             ?>
                         </select>

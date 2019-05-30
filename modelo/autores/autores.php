@@ -7,18 +7,21 @@
         function ConsultarTodoAutores(){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("SELECT * FROM autores");
+            $stmt = $conexion->prepare("SELECT a.*, l.Titulo as 'nombre_libro' FROM autores a INNER JOIN libros l  ON a.id_libro = l.Id_libros");
             $stmt->execute();
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
         }
 
-        function GuardarAutores($nombre_autor){
+        function GuardarAutores($nombre_autor, $libro){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("INSERT INTO `autores`
-                                            (`nombre_autor`)
-                                VALUES (:nombre_autor);");
+                                            (id_libro,
+                                            nombre_autor)
+                                VALUES (:id_libro,
+                                        :nombre_autor);");
             $stmt->bindParam(':nombre_autor', $nombre_autor, PDO::PARAM_STR);
+            $stmt->bindParam(':id_libro', $libro, PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
@@ -27,7 +30,7 @@
             }
         }
         
-        function ModificarAutores($id_autor, $nombre_autor){
+        function ModificarAutores($id_autor, $nombre_autor, $libro){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("UPDATE `autores`

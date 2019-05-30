@@ -29,6 +29,8 @@ $(document).ready(function(){
 
 
 function guardar(){
+    /*Obteniendo los datos del formulario
+    y los almacena en variabes*/
     var titulo = $('#Titulo').val();
     var edicion = $('#Edicion').val();
     var publicacion = $('#Anio_publicacion').val();
@@ -59,6 +61,7 @@ function guardar(){
     }).done(function(response){
         if(response.Respuesta == "OK"){
             alert("Los datos del libro se han guardado de forma exitosa");
+            window.location = "consultar.php";
         }else{
             console.log(response);
         }

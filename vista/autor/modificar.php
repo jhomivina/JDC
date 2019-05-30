@@ -6,7 +6,7 @@
         body{ 
             margin: 0;
             padding: 0; 
-            background: url(../resources/biblio.jpg) no-repeat center;
+            background: url(../../resources/biblio.jpg) no-repeat center;
             background-size:cover;               
             height: 100vh;
         }
@@ -14,8 +14,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head><br>
 
 <body>
@@ -25,13 +25,13 @@
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item dropdown text-white"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Autores</strong></a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="autores.html">Crear</a><a class="dropdown-item" role="presentation" href="autores-consulta.html">Consultar</a></div>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="crear.php">Crear</a><a class="dropdown-item" role="presentation" href="consultar.php">Consultar</a></div>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav">
                      <div class="">
-                         <a href="../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
+                         <a href="../../inicio.html" class="btn btn-light" role="button">Volver Al Inicio</a>
                      </div>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
         <div class="row justify-content-center">
 
         <?php
-            require_once  dirname(__DIR__) . '/modelo/conexion.php';
+            require_once  dirname(__DIR__,2) . '/modelo/conexion.php';
 
             $id = $_GET["id"];
             $conexion = new Conexion();
@@ -66,15 +66,15 @@
                 <h1 class="card-title"><strong>Modificar Autor</strong></h1><br>
                 <h6 class="text-muted card-subtitle mb-2" style="color: rgb(125,109,108);">Todos los campos marcados con * son obligatorios</h6><br>
                 <div class="row">
-                    <div class="col"><label class="label-control">Nombre del autor*</label><input type="text" id="autores" placeholder="Nombre del autor" class="form-control" style="width: 302px;" value="<?php echo $registro->nombre_autor; ?>"></div>
+                    <div class="col"><label class="label-control">Nombre del autor*</label><input type="text" id="autores" name="autores" placeholder="Nombre del autor" class="form-control" style="width: 302px;" value="<?php echo $registro->nombre_autor; ?>"></div>
                 </div>
             </div><br>
         </div>
         </div>
     </div>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/autores.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/autores.js"></script>
 </body>
 
 </html>
